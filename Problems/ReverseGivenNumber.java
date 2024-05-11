@@ -1,17 +1,25 @@
+import java.util.Scanner;
+
 public class ReverseGivenNumber {
     public static void main(String[] args) {
-        int number = 12345;
-        int reversedNumber = reverse(number);
-        System.out.println("Original number: " + number);
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter Desired Number : ");
+
+        int num = sc.nextInt();
+
+        String reversedNumber = reverse(num);
+        System.out.println("Original number: " + num);
         System.out.println("Reversed number : " + reversedNumber);
     }
 
-    public static int reverse(int number) {
-        int reversedNumber = 0;
+    public static String reverse(int number) {
+        String reversedNumber = "";
+        int lastDigit = 0;
         while (number != 0) {
-            int digit = number % 10; // Extract rightmost digit
-            reversedNumber = reversedNumber * 10 + digit; // Append the digit to reversedNumber
-            number /= 10; // Remove the rightmost digit
+            lastDigit = number % 10;
+            number = number / 10;
+            reversedNumber += lastDigit;
         }
         return reversedNumber;
     }
