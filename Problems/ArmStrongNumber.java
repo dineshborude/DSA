@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class CheckPallindromeNumber {
+public class ArmStrongNumber {
 
     public static void main(String[] args) {
 
@@ -10,22 +10,25 @@ public class CheckPallindromeNumber {
         int num = sc.nextInt();
         System.out.println("Your Number : " +num);
 
-        System.out.println(isPallindrome(num));
+
+
+        System.out.println(isArmstrong(num));
 
     }
 
-    public static boolean isPallindrome(int num) {
-        int rev = 0;
+    public static boolean isArmstrong(int num) {
+
         int ld = 0;
+        int sum = 0;
         int dupl = num;
 
         while (dupl > 0) {
             ld = dupl % 10;
-            rev = (rev*10)+ld;
+            sum += ld*ld*ld;
             dupl = dupl /10;
         }
 
-        return (num == rev);
+        return (sum == num);
     }
 
 }
