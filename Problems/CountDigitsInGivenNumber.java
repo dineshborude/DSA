@@ -18,9 +18,9 @@ public class CountDigitsInGivenNumber {
 
     public static int countDigit(int num) {
         int count = 0;
-        while (num != 0) {
-            num = num / 10; // Divide num by 10 to remove one digit
-            count++; // Increment the count for each digit removed
+        while(num != 0) {
+            num = num / 10;
+            count++;
         }
         return count;
     }
