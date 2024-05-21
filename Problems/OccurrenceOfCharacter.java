@@ -2,8 +2,9 @@ public class OccurrenceOfCharacter {
 
     public static void main(String[] args) {
 
-        String given = "Hello World";
-        given = given.replaceAll(" ","");
+        String given = "LTIMINdtree";
+        given = given.toLowerCase().replaceAll(" ","");
+
         System.out.println(given);
         int length = given.length();
         System.out.println("Length Of Given String : " +length);
