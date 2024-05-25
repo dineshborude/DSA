@@ -2,22 +2,29 @@ public class RemoveRepeatedCharacters {
 
     public static void main(String[] args) {
 
-        String str = "Hello Mama";
-        String str2 = "";  // Use a String to store the result
+        String str = "Hello Motto";
+        StringBuilder str2 = new StringBuilder();
+        int length = str.length();
 
-        int len = str.length();
+        for (int i = 0; i < length; i++) {
 
-        for (int i = 0; i < len; i++) {
             boolean isRepeated = false;
+
             for (int j = 0; j < i; j++) {
+
                 if (str.charAt(i) == str.charAt(j)) {
+
                     isRepeated = true;
                     break;
+
                 }
+
             }
+
             if (!isRepeated) {
-                str2 += str.charAt(i);  // Concatenation creates new String objects
+                str2.append(str.charAt(i));
             }
+
         }
 
         System.out.println("Original String: " + str);
