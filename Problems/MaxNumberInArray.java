@@ -8,8 +8,19 @@ public class MaxNumberInArray {
         int length = num.length;
         System.out.println("Length Of Given Array : "+length);
         int max = 0;
-        
-git
+
+        for (int i = 0; i < length; i++) {
+            max = num[i];
+            for (int j = 0; j < length; j++) {
+
+                if (max <= num[j]) {
+                    max = num[j];
+                }
+
+            }
+
+        }
+        System.out.println("Maximum In Array : "+max);
     }
 
 
