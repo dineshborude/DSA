@@ -23,3 +23,5 @@ public class RemoveNumbersFromString {
         System.out.println("String without numbers: " + freshString);
     }
 }
+
+
