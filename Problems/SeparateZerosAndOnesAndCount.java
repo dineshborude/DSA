@@ -28,6 +28,7 @@ public class SeparateZerosAndOnesAndCount {
 
 
         }
+
         System.out.println("Count ZERO : " +countZero);
         System.out.println("Count ONE : " +countOne);
         System.out.println(zeros);
