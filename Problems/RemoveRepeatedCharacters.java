@@ -2,32 +2,32 @@ public class RemoveRepeatedCharacters {
 
     public static void main(String[] args) {
 
-        String str = "Hello Motto";
+        String str1 = "Hello Motto";
         StringBuilder str2 = new StringBuilder();
-        int length = str.length();
+
+        int length = str1.length();
 
         for (int i = 0; i < length; i++) {
+            boolean repeated = false;
+            for (int j = 0; j < str2.length(); j++) {
 
-            boolean isRepeated = false;
+                if (str1.charAt(i) == str2.charAt(j)) {
 
-            for (int j = 0; j < i; j++) {
-
-                if (str.charAt(i) == str.charAt(j)) {
-
-                    isRepeated = true;
+                    repeated = true;
                     break;
 
                 }
 
             }
-
-            if (!isRepeated) {
-                str2.append(str.charAt(i));
-            }
-
+        if (!repeated) {
+            str2.append(str1.charAt(i));
+        }
         }
 
-        System.out.println("Original String: " + str);
+
+
+
+        System.out.println("Original String: " + str1);
         System.out.println("String without repeated characters: " + str2);
     }
 }
