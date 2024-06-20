@@ -11,6 +11,7 @@ public class Triangle_Stars {
                 System.out.print(" * ");
 
             }
+
             System.out.println();
         }
 
