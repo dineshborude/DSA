@@ -62,6 +62,5 @@ public void calculate() {
 | **Lifetime**      | Lives as long as referenced. Garbage collection reclaims unused memory. | Data exists during method execution and is destroyed upon exit. |
 | **Access**        | Accessible globally.                    | Accessible only within the method's scope. |
 | **Size**          | Grows dynamically, limited by system memory. | Fixed size, set when the thread is created. |
-```
 
-This ensures compatibility with most Markdown processors. Let me know if you still face any issues!
+
